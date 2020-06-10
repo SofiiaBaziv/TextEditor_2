@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>К.Р. №2</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+    <script src="https://kit.fontawesome.com/43069da89d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="text.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- header menu -->
+
+    <div id="menu1" class="header">
+        <div class="btn">
+            <div class="sec1">
+                <button id="btnArea" type="button" class="btn btn-light sty" onclick="areaEdit()" disabled>&#60;&#47;&#62;</button>
+            </div>
+            <div class="sec2">
+                <button id="bol" type="button" class="btn btn-light sty btfirst"><i class="uil uil-bold"></i></button>
+                <button id="ital" type="button" class="btn btn-light sty"><i class="uil uil-italic"></i></button>
+                <button id="undLine" type="button" class="btn btn-light sty"><i class="uil uil-underline"></i></button>
+                <button id="strike" type="button" class="btn btn-light sty sizeChar btlast">S</button>
+            </div>
+            <div class="sec3">
+                <button id="leftAlign" type="button" class="btn btn-light sty btfirst"><i class="uil uil-align-left"></i></button>
+                <button id="centerAlign" type="button" class="btn btn-light sty"><i class="uil uil-align-center"></i></button>
+                <button id="rightAlign" type="button" class="btn btn-light sty btlast"><i class="uil uil-align-right"></i></button>
+            </div>
+            <div class="sec4">
+                <button type="button" class="btn btn-light sty btfirst">A  
+                    <select id="selecFam" onchange="fontFamily()"> 
+                    <option  value="Arial" style="font-family:Arial">Arial</option>
+                    <option  value="Georgia" style="font-family:Georgia">Georgia</option>
+                    <option  value="Impact" style="font-family: Impact">Impact</option>
+                    <option  value="Tahoma" style="font-family: Tahoma">Tahoma</option>
+                    <option  value="Times New Roman" style="font-family: Times New Roman">Times New Roman</option>
+                    <option  value="Verdana" style="font-family: Verdana">Verdana</option>
+                </select>
+            </button>
+                <button type="button" class="btn btn-light sty">T<i class="uil uil-arrows-v"></i>
+                    <select id="selecSize" onchange="fontSizee()">
+                        <option  value="12px" style="font-size: 12px;">12px</option>
+                        <option  value="14px" style="font-size: 14px;">14px</option>
+                        <option  value="16px" style="font-size: 16px;">16px</option>
+                        <option  value="18px" style="font-size: 18px;">18px</option>
+                        <option  value="20px" style="font-size: 20px;">20px</option>
+                        <option  value="22px" style="font-size: 22px;">22px</option>
+                        <option  value="24px" style="font-size: 24px;">24px</option>
+                        <option  value="26px" style="font-size: 26px;">26px</option>
+                        <option  value="28px" style="font-size: 28px;">28px</option>
+                        <option  value="30px" style="font-size: 30px;">30px</option>
+                    </select>
+                </button>
+                <button type="button" class="btn btn-light sty" data-toggle="modal" data-target="#exampleModal"><i class="uil uil-palette"></i></button>
+                <button type="button" class="btn btn-light sty btlast" data-toggle="modal" data-target="#exampleModal2"><i class="uil uil-scenery "></i></button>
+            </div>
+            <div class="sec5">
+                <button id="lockOpen" type="button" class="btn btn-light sty" data-toggle="modal" data-target="#exampleModal3"><i class="uil uil-lock"></i></button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="menu2" class="header2 disp">
+
+        <div class="sec2">
+            <button id="saveBtn" type="button" class="btn btn-light sty btfirst" onclick="saveFun()"><i class="fas fa-save"></i></button>
+            <button id="tableBtn" type="button" class="btn btn-light sty" data-toggle="modal" data-target="#exampleModal4"><i class="fas fa-table"></i></button>
+            <button id="olBtn" type="button" class="btn btn-light sty" data-toggle="modal" data-target="#exampleModal5"><i class="fas fa-list-ol"></i></button>
+            <button id="ulBtn" type="button" class="btn btn-light sty sizeChar btlast" data-toggle="modal" data-target="#exampleModal6"><i class="fas fa-list-ul"></i></button>
+        </div>
+
+    </div>
+
+
+    <!-- area -->
+
+    <div id="Block" class="block">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    </div>
+
+    <textarea id="textAr" class="disp area">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    </textarea>
+
+
+
+
+    <!-- Modal COLOR -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Сhoose text color</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    <div id="chooseColor">
+                        <div class="c c-1" onclick="changeColor('teal')"></div>
+                        <div class="c c-2" onclick="changeColor('rgb(3, 87, 80)')"> </div>
+                        <div class="c c-3" onclick="changeColor('rgb(40, 160, 66)')"></div>
+                        <div class="c c-4" onclick="changeColor('rgb(3, 117, 50)')"></div>
+                        <div class="c c-5" onclick="changeColor('rgb(48, 125, 197)')"></div>
+                        <div class="c c-6" onclick="changeColor('rgb(47, 0, 255)')"></div>
+                        <div class="c c-7" onclick="changeColor('rgb(159, 62, 179')"></div>
+                        <div class="c c-8" onclick="changeColor('blueviolet')"></div>
+                        <div class="c c-9" onclick="changeColor('rgb(17, 37, 77)')"></div>
+                        <div class="c c-10" onclick="changeColor('rgba(3, 36, 100, 0.8)')"></div>
+                        <div class="c c-11" onclick="changeColor('gold')"></div>
+                        <div class="c c-12" onclick="changeColor('goldenrod')"></div>
+                        <div class="c c-13" onclick="changeColor('orange')"></div>
+                        <div class="c c-14" onclick="changeColor('orangered')"></div>
+                        <div class="c c-15" onclick="changeColor('coral')"></div>
+                        <div class="c c-16" onclick="changeColor('rgb(114, 33, 4)')"></div>
+                        <div class="c c-17" onclick="changeColor('rgba(220, 220, 220, 0.514)')"></div>
+                        <div class="c c-18" onclick="changeColor('rgba(80, 80, 80, 0.29)')"></div>
+                        <div class="c c-19" onclick="changeColor('rgba(80, 80, 80, 0.4)')"></div>
+                        <div class="c c-20" onclick="changeColor('rgba(80, 80, 80, 0.699)')"></div>
+                        <div class="c c-21" onclick="changeColor('black')"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 (BACKGROUND) -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Сhoose background color or image</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a id="colorA" class="nav-link active" href="#" onclick="displayColor()">Colors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="imgA" class="nav-link" href="#" onclick="displayImg()">Images</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="fileA" class="nav-link" href="#" onclick="displayFile()">Files</a>
+                    </li>
+                </ul>
+                <div class="modal-body">
+                    <div id="chooseBgColor">
+                        <div class="cBg c-1" onclick="changeBg('teal')"></div>
+                        <div class="cBg c-2" onclick="changeBg('rgb(3, 87, 80)')"> </div>
+                        <div class="cBg c-3" onclick="changeBg('rgb(40, 160, 66)')"></div>
+                        <div class="cBg c-4" onclick="changeBg('rgb(3, 117, 50)')"></div>
+                        <div class="cBg c-5" onclick="changeBg('rgb(48, 125, 197)')"></div>
+                        <div class="cBg c-6" onclick="changeBg('rgb(47, 0, 255)')"></div>
+                        <div class="cBg c-7" onclick="changeBg('rgb(159, 62, 179')"></div>
+                        <div class="cBg c-8" onclick="changeBg('blueviolet')"></div>
+                        <div class="cBg c-9" onclick="changeBg('rgb(17, 37, 77)')"></div>
+                        <div class="cBg c-10" onclick="changeBg('rgba(3, 36, 100, 0.8)')"></div>
+                        <div class="cBg c-11" onclick="changeBg('gold')"></div>
+                        <div class="cBg c-12" onclick="changeBg('goldenrod')"></div>
+                        <div class="cBg c-13" onclick="changeBg('orange')"></div>
+                        <div class="cBg c-14" onclick="changeBg('orangered')"></div>
+                        <div class="cBg c-15" onclick="changeBg('coral')"></div>
+                        <div class="cBg c-16" onclick="changeBg('rgb(114, 33, 4)')"></div>
+                        <div class="cBg c-17" onclick="changeBg('rgba(220, 220, 220, 0.514)')"></div>
+                        <div class="cBg c-18" onclick="changeBg('rgba(80, 80, 80, 0.29)')"></div>
+                        <div class="cBg c-19" onclick="changeBg('rgba(80, 80, 80, 0.4)')"></div>
+                        <div class="cBg c-20" onclick="changeBg('rgba(80, 80, 80, 0.699)')"></div>
+                        <div class="cBg c-21" onclick="changeBg('black')"></div>
+                    </div>
+
+
+                    <div id="chooseBgImg" class="disp">
+                        <div class="cIm im-1" onclick="changeIm('(img/11.jpg)')"></div>
+                        <div class="cIm im-2" onclick="changeIm('(img/10.jpg)')"></div>
+                        <div class="cIm im-3" onclick="changeIm('(img/3.png)')"></div>
+                        <div class="cIm im-4" onclick="changeIm('(img/4.jpg)')"></div>
+                        <div class="cIm im-5" onclick="changeIm('(img/5.jpg)')"></div>
+                        <div class="cIm im-6" onclick="changeIm('(img/6.jpg)')"></div>
+                        <div class="cIm im-7" onclick="changeIm('(img/7.jfif)')"></div>
+                        <div class="cIm im-8" onclick="changeIm('(img/9.jpg)')"></div>
+                        <div class="cIm im-9" onclick="changeIm('(img/77.jfif)')"></div>
+                    </div>
+
+                    <div id="chooseBgFile" class="custom-file disp">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal 3 (Lock) -->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title textSign" id="exampleModalLabel">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    <form id="logForm">
+                        <div>
+                            <input type="text" class="form-control" id="log">
+                        </div>
+                        <div>
+                            <input type="password" class="form-control  mrgtop" id="pass">
+                            <div class="invalid-feedback" id="validMsg">
+                                Value is empty
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary btnSign" type="submit"><span>Sign In</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal 4 (Table) -->
+    <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create table</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form name="formTb" id="tableForm" class="needs-validation" novalidate>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom01">Count TR:</label>
+                                <input name="countTR" type="text" class="form-control" id="validationCustom01" placeholder="Type here... " required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom02">Count TD:</label>
+                                <input name="countTD" type="text" class="form-control" id="validationCustom02" placeholder="Type here... " required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom03">Width of TD:</label>
+                                <input name="borderWidthTD" type="text" class="form-control" id="validationCustom03" placeholder="Type here... " required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom04">Width of TD:</label>
+                                <input name="borderHeightTD" type="text" class="form-control" id="validationCustom04" placeholder="Type here... " required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom05">Width of border:</label>
+                                <input name="borderWidth" type="text" class="form-control" id="validationCustom05" placeholder="Type here... " required>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                                <label for="validationCustom06">Style of border:</label>
+                                <select name="borderType" class="custom-select" id="validationCustom06" required>
+                                    <option selected disabled value="">choose style</option>
+                                    <option value="dotted">dotted</option>
+                                    <option value="dashed">dashed</option>
+                                    <option value="solid">solid</option>
+                                    <option value="double">double</option>
+                                    <option value="groove">groove</option>
+                                    <option value="ridge">ridge</option>
+                                    <option value="inset">inset</option>
+                                    <option value="outset">outset</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                                <label for="validationCustom07">Style of border:</label>
+                                <select name="borderColor" class="custom-select" id="validationCustom07" required>
+                                    <option selected disabled value="">choose color</option>
+                                    <option value="black">black</option>
+                                    <option value="red">red</option>
+                                    <option value="green">green</option>
+                                    <option value="blue">blue</option>
+                                    <option value="yellow">yellow</option>
+                                    <option value="white">white</option>
+                                    <option value="gray">gray</option>
+                                    <option value="pink">pink</option>
+                                    </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div id="validation-message">
+
+                            </div>
+                        </div>
+                        <div class="form-row ">
+                            <div class="col-md-6 mb-3 ">
+                                <button type="button " class="btn btn-danger btn-block" onclick="resetTbl()"><span>Reset</span></button>
+                            </div>
+                            <div class="col-md-6 mb-3 ">
+                                <button type="submit" class="btn btn-success btn-block" onclick="createTbl()"><span>Create table</span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal 5 (Li->ol) -->
+    <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create Ol</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <form name="formOl" id="formLiOl" class="needs-validation" novalidate>
+                        <div class="form-row">
+                            <div class="col-md-12 mb-12">
+                                <label for="validationCustom08">Count li item:</label>
+                                <input name="countLi" type="text" class="form-control" id="validationCustom08" placeholder="Type here... " required>
+                            </div>
+
+
+                            <div class="col-md-12 mb-12">
+                                <label for="validationCustom09" class="marg">Type mark of list:</label>
+                                <select name="typeLi" class="custom-select" id="validationCustom09" required>
+                                    <option selected disabled value="">choose Ol type mark</option>
+                                    <option value="decimal">1</option>
+                                    <option value="upper-roman">I</option>
+                                    <option value="lower-roman">i</option>
+                                    <option value="upper-alpha">A</option>
+                                    <option value="lower-alpha">a</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div id="validation-messages">
+
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3 ">
+                                <button type="button" class="btn btn-danger btn-block marg2" onclick="resetLiOl()"><span>Reset</span></button>
+                            </div>
+                            <div class="col-md-6 mb-3 ">
+                                <button type="submit" class="btn btn-success btn-block marg2" onclick="createLiOl()"><span>Create list</span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Modal 6 (Li->ul) -->
+    <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create Ul</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <form name="formUl" id="formLiUl" class="needs-validation" novalidate>
+                        <div class="form-row">
+                            <div class="col-md-12 mb-12">
+                                <label for="validationCustom010">Count li item:</label>
+                                <input name="countLiUl" type="text" class="form-control" id="validationCustom010" placeholder="Type here... " required>
+                            </div>
+
+
+                            <div class="col-md-12 mb-12">
+                                <label for="validationCustom011" class="marg">Type mark of list:</label>
+                                <select name="typeLiUl" class="custom-select" id="validationCustom011" required>
+                                    <option selected disabled value="">choose Ul type mark</option>
+                                    <option value="circle">circle</option>
+                                    <option value="disc">disc</option>
+                                    <option value="square">square</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div id="validation-messagesss">
+
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3 ">
+                                <button type="button" class="btn btn-danger btn-block marg2" onclick="resetLiUl()"><span>Reset</span></button>
+                            </div>
+                            <div class="col-md-6 mb-3 ">
+                                <button type="submit" class="btn btn-success btn-block marg2" onclick="createLiUl()"><span>Create list</span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal 7 (end) -->
+    <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered ">
+            <div class="modal-content ">
+                <div class="modal-body ">
+                    <div class="form-row ">
+                        <div class="col-md-6 mb-6">
+                            <button type="button" class="btn btn-dark btn-block" onclick="cancelEnd()"><span>Cancel</span></button>
+                        </div>
+                        <div class="col-md-6 mb-6 ">
+                            <button type="submit" class="btn btn-danger btn-block" onclick="signOut()"><span>Sign Out</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function(form) {
+                        form.addEventListener('submit', function(event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
+        </script>
+
+</body>
+
+</html>

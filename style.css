@@ -1,0 +1,415 @@
+ body {
+     box-sizing: border-box;
+ }
+ 
+ .header {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     height: 80px;
+     background-color: rgb(150, 147, 147);
+ }
+ 
+ .header2 {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     height: 80px;
+     background-color: rgb(150, 147, 147);
+ }
+ 
+ .btn {
+     width: 50%;
+     height: inherit;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ 
+ .btn-block {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+ }
+ 
+ .sec1,
+ .sec2,
+ .sec3,
+ .sec4,
+ .sec5 {
+     display: flex;
+ }
+ 
+ .sty {
+     width: 40px;
+     height: 40px;
+     border-radius: 0px;
+     justify-content: center;
+     align-items: center;
+     font-weight: 600;
+ }
+ 
+ .uil-arrows-v {
+     font-size: 10px;
+ }
+ 
+ .sizeChar {
+     font-size: 14px;
+ }
+ 
+ .sec2 i {
+     font-size: 18px;
+ }
+ 
+ .sec1 button,
+ .sec5 button {
+     border-radius: 5px;
+ }
+ 
+ .btfirst {
+     border-radius: 5px 0px 0px 5px;
+ }
+ 
+ .btlast {
+     border-radius: 0 5px 5px 0;
+ }
+ 
+ .area {
+     width: 100%;
+     min-height: 635px;
+     resize: none;
+     outline: none;
+     border: none;
+     padding-left: 20px;
+     padding-top: 20px;
+ }
+ 
+ .block {
+     width: 100%;
+     min-height: 641px;
+     padding-top: 20px;
+     padding-left: 20px;
+     padding-bottom: 20px;
+ }
+ 
+ .fontStyle {
+     font-style: italic;
+ }
+ 
+ .und {
+     text-decoration: underline;
+ }
+ 
+ .und {
+     text-decoration: underline;
+ }
+ 
+ .str {
+     text-decoration: line-through;
+ }
+ 
+ .gray1 {
+     background-color: #e2e6ea;
+     border-color: #e2e6ea;
+ }
+ 
+ #selecFam {
+     width: 20px;
+     height: 40px;
+     border: none;
+     outline: none;
+     background-color: transparent;
+ }
+ 
+ .spanSize {
+     font-size: 15px;
+ }
+ 
+ #selecSize {
+     width: 14px;
+     height: 40px;
+     border: none;
+     outline: none;
+     background-color: transparent;
+ }
+ 
+ #chooseColor,
+ #chooseBgColor {
+     display: flex;
+     flex-flow: row wrap;
+ }
+ 
+ .cBg {
+     width: 58px;
+     height: 58px;
+     margin: 4px 4px;
+     border-radius: 5px;
+     cursor: pointer;
+     display: flex;
+ }
+ 
+ .c {
+     width: 58px;
+     height: 58px;
+     margin: 4px 4px;
+     border-radius: 5px;
+     cursor: pointer;
+     display: flex;
+ }
+ 
+ .c-1 {
+     background-color: teal;
+ }
+ 
+ .c-2 {
+     background-color: rgb(3, 87, 80);
+ }
+ 
+ .c-3 {
+     background-color: rgb(40, 160, 66);
+ }
+ 
+ .c-4 {
+     background-color: rgb(3, 117, 50);
+ }
+ 
+ .c-5 {
+     background-color: rgb(48, 125, 197);
+ }
+ 
+ .c-6 {
+     background-color: rgb(47, 0, 255);
+ }
+ 
+ .c-7 {
+     background-color: rgb(159, 62, 179);
+ }
+ 
+ .c-8 {
+     background-color: blueviolet;
+ }
+ 
+ .c-9 {
+     background-color: rgb(17, 37, 77);
+ }
+ 
+ .c-10 {
+     background-color: rgba(3, 36, 100, 0.8);
+ }
+ 
+ .c-11 {
+     background-color: gold;
+ }
+ 
+ .c-12 {
+     background-color: goldenrod;
+ }
+ 
+ .c-13 {
+     background-color: orange;
+ }
+ 
+ .c-14 {
+     background-color: orangered;
+ }
+ 
+ .c-15 {
+     background-color: coral;
+ }
+ 
+ .c-16 {
+     background-color: rgb(114, 33, 4);
+ }
+ 
+ .c-17 {
+     background-color: rgba(220, 220, 220, 0.514);
+ }
+ 
+ .c-18 {
+     background-color: rgba(80, 80, 80, 0.29);
+ }
+ 
+ .c-19 {
+     background-color: rgba(80, 80, 80, 0.4);
+ }
+ 
+ .c-20 {
+     background-color: rgba(80, 80, 80, 0.699);
+ }
+ 
+ .c-21 {
+     background-color: black;
+ }
+ 
+ #chooseBgImg {
+     display: flex;
+     flex-flow: row wrap;
+ }
+ 
+ .cIm {
+     width: 146px;
+     height: 65px;
+     border-radius: 5px;
+     margin: 4px 4px;
+     cursor: pointer;
+     display: flex;
+ }
+ 
+ .im-1 {
+     background: url(img/11.jpg);
+     background-size: cover;
+ }
+ 
+ .im-2 {
+     background: url(img/10.jpg);
+     background-size: cover;
+ }
+ 
+ .im-3 {
+     background: url(img/3.png);
+     background-size: cover;
+ }
+ 
+ .im-4 {
+     background: url(img/4.jpg);
+     background-size: cover;
+ }
+ 
+ .im-5 {
+     background: url(img/5.jpg);
+     background-size: cover;
+ }
+ 
+ .im-6 {
+     background: url(img/6.jpg);
+     background-size: cover;
+ }
+ 
+ .im-7 {
+     background: url(img/7.jfif);
+     background-size: cover;
+ }
+ 
+ .im-8 {
+     background: url(img/9.jpg);
+     background-size: cover;
+ }
+ 
+ .im-9 {
+     background: url(img/77.jfif);
+     background-size: cover;
+ }
+ 
+ .disp {
+     display: none!important;
+ }
+ 
+ .textSign {
+     font-weight: 900;
+     position: absolute;
+     left: 43%;
+ }
+ 
+ .mrgtop {
+     margin-top: 10px;
+ }
+ 
+ .btnSign {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     margin: 15px 0;
+ }
+ 
+ .wrap-inp {
+     display: flex;
+ }
+ 
+ .inpSection {
+     width: 50%;
+ }
+ 
+ .inpSection2 {
+     margin-top: 15px;
+     width: 50%;
+ }
+ 
+ .inpSection3 {
+     display: flex;
+     margin-top: 15px;
+     width: 50%;
+ }
+ 
+ .inp {
+     width: 97%;
+     border-radius: 5px;
+     border: 1px solid gainsboro;
+     padding: 4px;
+     padding-left: 10px;
+ }
+ 
+ .wrapSelect {
+     width: 50%;
+ }
+ 
+ .spanText {
+     display: block;
+     margin-top: 2px;
+     margin-bottom: 6px;
+ }
+ 
+ .select {
+     border-radius: 5px;
+     border: 1px solid gainsboro;
+     padding: 4px;
+     width: 165px;
+ }
+ 
+ .btnForm {
+     width: 97%;
+     border: none;
+     border-radius: 5px;
+     margin-top: 10px;
+     padding: 5px;
+     display: flex;
+     justify-content: center;
+ }
+ 
+ .form-check {
+     margin-top: -35px!important;
+     padding-left: 0px!important;
+ }
+ 
+ #validation-message {
+     display: none;
+     width: 100%;
+     font-size: 80%;
+     color: red;
+     margin-left: .50rem;
+ }
+ 
+ #validation-messages {
+     display: none;
+     width: 100%;
+     font-size: 80%;
+     color: red;
+     margin-left: .50rem;
+ }
+ 
+ #validation-messagesss {
+     display: none;
+     width: 100%;
+     font-size: 80%;
+     color: red;
+     margin-left: .50rem;
+ }
+ 
+ .marg {
+     margin-top: 12px;
+ }
+ 
+ .marg2 {
+     margin-top: 22px;
+ }
